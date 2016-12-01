@@ -17,10 +17,10 @@
         vm.removeItem = removeItem;
 
         function searchMenu() {
-            vm.searched = true;
             menuSearchService.getMatchedMenuItems(vm.searchText)
                 .then(function(result) {
                     vm.found = result;
+                    vm.searched = true;
                 });
         }
 
